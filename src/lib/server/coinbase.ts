@@ -12,4 +12,3 @@ Coinbase.configure({
     apiKeyName: CDP_API_KEY_NAME as string,
     privateKey: apiKeyString.replaceAll("\\n", "\n") as string,
 });
-

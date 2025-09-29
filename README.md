@@ -39,44 +39,44 @@ Go to https://portal.cdp.coinbase.com/ and create an API key if you don't alread
 
 This encryption key is used to secure your private keys stored in vercel postgres. You can generate one using the following command:
 
-```bash
+\`\`\`bash
 openssl rand -hex 32
-```
+\`\`\`
 
 ### Setup your environment variables
 
 Create a `.env` file in the root of the project with the following:
 
-```bash
+\`\`\`bash
 CDP_API_KEY_NAME="your-api-key-name"
 CDP_API_KEY_SECRET="your-api-key-secret"
 ENCRYPTION_KEY="your-encryption-key"
 POSTGRES_URL="postgresql://admin:password@localhost:5432/seeds"
 NEXT_PUBLIC_CDP_PROJECT_ID="your-cdp-project-id"
-```
+\`\`\`
 
 ### Run the Postgres DB
 
-```bash
+\`\`\`bash
 npm run db:up
-```
+\`\`\`
 
 If you don't see database logs, double check Postgres is installed:
 
-```bash
+\`\`\`bash
 docker run --name test-postgres -e POSTGRES_PASSWORD=password -e POSTGRES_DB=seeds -e POSTGRES_USER=admin -p 5432:5432 postgres:14
-```
+\`\`\`
 
 Set up the Prisma schema in the DB
 
-```bash
+\`\`\`bash
 npm install
 npm run db:setup
-```
+\`\`\`
 
 ### Run the app
 
-```bash
+\`\`\`bash
 npm run dev
 # or
 yarn dev
@@ -84,7 +84,7 @@ yarn dev
 pnpm dev
 # or
 bun dev
-```
+\`\`\`
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
